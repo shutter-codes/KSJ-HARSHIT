@@ -17,7 +17,7 @@ export default function ForgetPassword() {
         return;
       }
 
-      const response = await fetch('http://localhost:4000/api/send-reset-password-email', {
+      const response = await fetch('http://localhost:3000/api/send-reset-password-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
