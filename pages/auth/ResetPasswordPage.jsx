@@ -27,26 +27,27 @@ const ResetPasswordPage = () => {
   };
 
   return (
-    <div>
-      <h2>Reset Password</h2>
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label>New Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </div>
-        <div>
-          <label>Confirm Password:</label>
-          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-        </div>
-        <button type="submit">Reset Password</button>
-      </form>
+    <div class="container mx-auto px-4">
+  <h2 class="text-2xl font-semibold mb-4">Reset Password</h2>
+  {errorMessage && <p class="text-red-500">{errorMessage}</p>}
+  {successMessage && <p class="text-green-500">{successMessage}</p>}
+  <form onSubmit={handleSubmit} class="max-w-md">
+    <div class="mb-4">
+      <label class="block mb-2" for="email">Email:</label>
+      <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" />
     </div>
+    <div class="mb-4">
+      <label class="block mb-2" for="password">New Password:</label>
+      <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-2" for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" />
+    </div>
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300">Reset Password</button>
+  </form>
+</div>
+
   );
 };
 

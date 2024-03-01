@@ -44,7 +44,7 @@ async function sendPasswordResetEmail(email) {
       html: `
         <p>Hello,</p>
         <p>Please click the following link to reset your password:</p>
-        <p><a href="http://localhost:3000/reset-password">Reset Password</a></p>
+        <p><a href="http://localhost:3000/auth/ResetPasswordPage">Reset Password</a></p>
         <p>If you didn't request a password reset, you can safely ignore this email.</p>
       `
     });

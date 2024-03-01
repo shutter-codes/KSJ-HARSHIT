@@ -14,8 +14,6 @@ import { useRouter } from 'next/router';
 export default function Home() {
   const dispatch = useDispatch();
   const token = Cookies.get('token');
-  const router = useRouter();
-
   console.log("TOKEN: ", token);
 
 
@@ -35,13 +33,6 @@ export default function Home() {
       dispatch(setUserData(null))
     }
   }, [token, dispatch])
-
-
-  useEffect(() => {
-    if (router.pathname === '/resetPasswordPage') {
-      router.push(<ResetPasswordPage/>);
-    }
-  }, [router.pathname]);
 
 
   return (

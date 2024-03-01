@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { BsFillBookmarkFill } from 'react-icons/bs'
 import { useSelector } from 'react-redux';
 import JobsCard from './JobsCard';
-import { Route } from 'react-router-dom';
 export default function Intro() {
   const [search, setSearch] = useState('');
   const jobData = useSelector(state => state.Job.JobData);
