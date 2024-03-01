@@ -134,6 +134,7 @@ export default function NavBar() {
               Organizations
             </Link>
           
+          </div>
           <div className="px-2 h-full hidden items-center justify-center lg:flex ">
             {user !== null ? (
               <>
