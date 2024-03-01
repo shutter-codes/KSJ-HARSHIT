@@ -133,11 +133,7 @@ export default function NavBar() {
             >
               Organizations
             </Link>
-            <Link
-              href={"/auth/ResetPasswordPage"}
-              className="px-3 mx-4 text-base font-medium transition-all duration-700 hover:translate-y-2 uppercase"
-            > Reset Password Page</Link>
-          </div>
+          
           <div className="px-2 h-full hidden items-center justify-center lg:flex ">
             {user !== null ? (
               <>
